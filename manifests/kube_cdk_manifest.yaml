@@ -11,6 +11,6 @@ parameters:
   execute_container_image_uri: celloproj/cello-cdk:1.99.0
 project_name: project1
 target_name: target1
-type: diff
+type: sync
 workflow_template_name: cello-single-step-vault-aws
 
