@@ -1,16 +1,24 @@
 arguments:
   execute:
-    - "--no-color --require-approval never"
+  - --all --no-color --require-approval never --toolkit-stack-name cdk-toolkit-3606274994427333889-o92tcx6o96 --context '@aws-cdk/core:bootstrapQualifier=o92tcx6o96'
 environment_variables:
   AWS_REGION: us-west-2
-  CODE_URI: https://github.com/cello-proj/cello/releases/download/v0.4.6/cdk-typescript-example.tar.gz
-  VAULT_ADDR: http://vault.default.svc.cluster.local:8200
-  APPROVED_BY: Wei Li
+  AWS_ACCOUNT: '183925290872'
+  CODE_URI: https://artifactory.a.intuit.com/artifactory/generic-intuit/dev-integration/test-apigw/cdk-0.2.10.tar.gz
+  ENVIRONMENT: prd
+  VAULT_ADDR: https://dev-prd-aco-vault.argocloudopsprdusw2.iks2.a.intuit.com:8200
+  GIT_ORG: dev-integration
+  GIT_REPO: test-apigw
+  CDK_NEW_BOOTSTRAP: 1
+  TARGET_ID: o92tcx6o96
+  ARTIFACTORY_URI: docker.artifactory.a.intuit.com/dev-integration/test-apigw/service/test-apigw:0.2.10
+  ASSET_ID: 3606274994427333889
 framework: cdk
 parameters:
-  execute_container_image_uri: celloproj/cello-cdk:1.99.0
-project_name: project1
-target_name: target1
+  execute_container_image_uri: docker.intuit.com/dev-integration/aco-runtime-images/service/aco-runtime-image-node:14
+  pre_container_image_uri: docker.intuit.com/dev-integration/aco-image-push/service/aco-image-push:stable
+project_name: 3606274994427333889
+target_name: prdusw2
 type: sync
-workflow_template_name: cello-single-step-vault-aws
+workflow_template_name: argo-cloudops-deploy
 
