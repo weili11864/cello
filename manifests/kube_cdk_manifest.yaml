@@ -13,6 +13,7 @@ environment_variables:
   TARGET_ID: o92tcx6o96
   ARTIFACTORY_URI: docker.artifactory.a.intuit.com/dev-integration/test-apigw/service/test-apigw:0.2.10
   ASSET_ID: 3606274994427333889
+  APPROVED_BY: wli5
 framework: cdk
 parameters:
   execute_container_image_uri: docker.intuit.com/dev-integration/aco-runtime-images/service/aco-runtime-image-node:14
