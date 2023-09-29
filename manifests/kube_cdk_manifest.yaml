@@ -20,5 +20,5 @@ parameters:
 project_name: project1
 target_name: prdusw2
 type: sync
-workflow_template_name: argo-cloudops-deploy
+workflow_template_name: cello-single-step-vault-aws
 
