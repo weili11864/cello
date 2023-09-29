@@ -17,7 +17,7 @@ framework: cdk
 parameters:
   execute_container_image_uri: docker.intuit.com/dev-integration/aco-runtime-images/service/aco-runtime-image-node:14
   pre_container_image_uri: docker.intuit.com/dev-integration/aco-image-push/service/aco-image-push:stable
-project_name: 3606274994427333889
+project_name: project1
 target_name: prdusw2
 type: sync
 workflow_template_name: argo-cloudops-deploy
